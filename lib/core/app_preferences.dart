@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_social_app/core/enums.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppPreferences {
@@ -25,5 +26,22 @@ class AppPreferences {
         themeString = 'system';
     }
     await prefs.setString(_themeKey, themeString);
+  }
+
+  Future<void> setLanguage(String language) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('language', language);
+  }
+
+  Lango getLanguage(SharedPreferences prefs) {
+    final languageString = prefs.getString('language');
+    if (languageString == null) {
+      return Lango.en;
+    } else {
+      return Lango.values.firstWhere(
+        (lango) => lango.code == languageString,
+        orElse: () => Lango.en,
+      );
+    }
   }
 }

@@ -59,7 +59,7 @@ class __AddNewWordWidgetState extends ConsumerState<_AddNewWordWidget> {
       if (mounted) {
         ToastWidget.show(
           context,
-          message: AppStrings.wordCountToast(currentCount),
+          message: context.lango.wordCountToast(count: currentCount),
           type: ToastType.success,
         );
       }
@@ -77,8 +77,8 @@ class __AddNewWordWidgetState extends ConsumerState<_AddNewWordWidget> {
 
   /// Method to create the decoration for the text field
   ///
-  InputDecoration _decoration() => const InputDecoration(
-    labelText: AppStrings.typeNewWordLabel,
+  InputDecoration _decoration() => InputDecoration(
+    labelText: context.lango.typeNewWordLabel,
     border: OutlineInputBorder(),
   );
 

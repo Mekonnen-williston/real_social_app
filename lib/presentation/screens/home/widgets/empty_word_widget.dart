@@ -11,7 +11,7 @@ class _EmptyWordWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Text(
-          AppStrings.noWordsMessage,
+          context.lango.noWordsMessage,
           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
             fontWeight: FontWeight.w500,
             fontSize: 18,

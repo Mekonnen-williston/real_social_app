@@ -1,0 +1,22 @@
+{
+    "@@locale": "he",
+    "language": "שפה",
+    "signInWithGoogle": "התחבר עם גוגל",
+    "loginErrorMessage": "ההתחברות נכשלה. אנא נסה שוב.",
+    "favoriteWordsTitle": "מילים מועדפות",
+    "typeNewWordLabel": "הקלד מילה חדשה...",
+    "logoutTooltip": "התנתק",
+    "noWordsMessage": "לא נמצאו מילים. אנא הוסף מילים.",
+    "errorMessage": "משהו השתבש. אנא נסה שוב.",
+    "retry": "נסה שוב",
+    "changeLanguage": "שנה שפה",
+    "wordCountToast": "יש לך {count} מילים!",
+    "@wordCountToast": {
+        "description": "הודעת Toast המציגה את מספר המילים",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    }
+}

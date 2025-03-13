@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:real_social_app/core/app_strings.dart';
+import 'package:real_social_app/core/l10n/generated/app_localizations.dart';
+import 'package:real_social_app/core/l10n/l10n.dart';
+import 'package:real_social_app/core/l10n/language_controller.dart';
 import 'package:real_social_app/core/router/app_router.dart';
 
 import 'core/theme/app_theme_controller.dart';
@@ -35,6 +39,8 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final language = ref.watch(languageControllerProvider);
+
     final themeController = ref.watch(themeControllerProvider);
     return MaterialApp.router(
       title: AppStrings.appTitle,
@@ -43,6 +49,15 @@ class MyApp extends ConsumerWidget {
       themeMode: themeController.themeMode,
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
+      debugShowCheckedModeBanner: false,
+      supportedLocales: L10n.all,
+      locale: Locale(language.code),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
     );
   }
 }

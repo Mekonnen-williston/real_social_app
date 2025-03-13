@@ -1,0 +1,7 @@
+arb-dir: lib/core/l10n
+synthetic-package: false
+template-arb-file: app_en.arb
+output-dir: lib/core/l10n/generated
+use-escaping: false
+use-named-parameters: true
+untranslated-messages-file: l10n_untranslated_keys.json

@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:real_social_app/core/theme/app_colors.dart';
-import 'package:real_social_app/core/app_strings.dart';
 import 'package:real_social_app/core/assets.dart';
+import 'package:real_social_app/core/extensions.dart';
 import 'package:real_social_app/core/router/app_router.dart';
+import 'package:real_social_app/core/theme/app_colors.dart';
 import 'package:real_social_app/presentation/providers/auth_provider.dart';
 import 'package:real_social_app/presentation/widgets/toast_widget.dart';
 
@@ -33,7 +33,7 @@ class GoogleSignInWidget extends ConsumerWidget {
         return;
       }
 
-      ToastWidget.show(context, message: AppStrings.loginErrorMessage);
+      ToastWidget.show(context, message: context.lango.loginErrorMessage);
     }
   }
 
@@ -63,7 +63,7 @@ class GoogleSignInWidget extends ConsumerWidget {
             fit: BoxFit.cover,
           ),
         ),
-        label: const Text(AppStrings.signInWithGoogle),
+        label: Text(context.lango.signInWithGoogle),
         style: _style(),
       ),
     );

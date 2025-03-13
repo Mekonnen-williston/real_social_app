@@ -1,13 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:real_social_app/core/app_strings.dart';
+import 'package:real_social_app/core/extensions.dart';
 import 'package:real_social_app/core/router/app_router.dart';
 import 'package:real_social_app/models/extensions/word_extension.dart';
 import 'package:real_social_app/models/word.dart';
 import 'package:real_social_app/presentation/providers/auth_provider.dart';
 import 'package:real_social_app/presentation/providers/word_provider.dart';
 import 'package:real_social_app/presentation/widgets/app_bar_widget.dart';
+import 'package:real_social_app/presentation/widgets/language_switcher_widget.dart';
 import 'package:real_social_app/presentation/widgets/loading_widget.dart';
 import 'package:real_social_app/presentation/widgets/retry_widget.dart';
 import 'package:real_social_app/presentation/widgets/theme_switcher_widget.dart';
@@ -39,8 +40,12 @@ class HomeScreen extends ConsumerWidget {
       onRefresh: () => _onRefresh(ref),
       child: Scaffold(
         appBar: AppBarWidget(
-          title: AppStrings.favoriteWordsTitle,
-          actions: [ThemeSwitcherWidget(), _LogOutWidget()],
+          title: context.lango.favoriteWordsTitle,
+          actions: [
+            LanguageSwitchIconButton(),
+            ThemeSwitcherWidget(),
+            _LogOutWidget(),
+          ],
         ),
         body: SafeArea(
           child: favoriteWordsAsync.when(
@@ -49,7 +54,7 @@ class HomeScreen extends ConsumerWidget {
             error: (_, _) {
               return RetryWidget(
                 onRetry: () => _onRefresh(ref),
-                message: AppStrings.errorMessage,
+                message: context.lango.errorMessage,
               );
             },
           ),

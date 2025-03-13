@@ -27,7 +27,7 @@ class _LogOutWidget extends ConsumerWidget {
       child: IconButton(
         onPressed: () async => await _logout(ref),
         icon: const Icon(Icons.logout),
-        tooltip: AppStrings.logoutTooltip,
+        tooltip: context.lango.logoutTooltip,
       ),
     );
   }
