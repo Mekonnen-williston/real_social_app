@@ -82,6 +82,10 @@ Supabase/
 
 ## Supabase SQL Functions and Policies:
 
+* The following SQL commands are used to set up the database schema and policies for the `favorite_words` table in Supabase. 
+
+### They are also included under the `Supabase` directory in the project structure.
+
 ```sql
 -- Create favorite_words table
 create table favorite_words (
