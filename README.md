@@ -15,6 +15,11 @@ A Flutter application that demonstrates clean architecture, real-time updates wi
 - **State Management:**  
   - Uses Riverpod to manage application state, including a local provider for favorite words.
 
+- **Theme Management:**  
+  - Dark and light themes are supported.
+  - Theme switching is implemented using Riverpod.
+  - The app uses a custom theme controller to manage the app's theme.
+
 - **Navigation:**  
   - AutoRoute (with AdaptiveAutoRouter) for type-safe, declarative navigation.
   - A splash screen that redirects based on the current authentication state.
