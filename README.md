@@ -20,6 +20,14 @@ A Flutter application that demonstrates clean architecture, real-time updates wi
   - Theme switching is implemented using Riverpod.
   - The app uses a custom theme controller to manage the app's theme.
 
+- **Internationalization:**  
+  - The app supports multiple languages using the `flutter_localizations` package.
+  - For now, only English and Hebrew are supported.
+  - The app uses the `intl` package for localization.
+
+- **Database:**
+  - Supabase is used as the backend database.
+
 - **Navigation:**  
   - AutoRoute (with AdaptiveAutoRouter) for type-safe, declarative navigation.
   - A splash screen that redirects based on the current authentication state.
