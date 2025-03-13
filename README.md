@@ -50,6 +50,12 @@ lib/
 │   ├── theme/
 │   │   ├── app_colors.dart
 │   │   ├── app_theme_controller.dart
+│   ├── l10n/
+│   │   ├── generated/
+│   │   ├── app_en.arb
+│   │   ├── app_he.arb
+│   │   ├── l10n.dart
+│   │   ├── language_controller.dart
 │   ├── app_preferences.dart
 │   ├── api_keys.dart
 │   ├── app_strings.dart
@@ -90,6 +96,8 @@ lib/
 │   |   |   └── retry_widget.dart
 │   |   |   └── theme_switcher_widget.dart
 └── main.dart
+└── l10n.yaml
+└── pubspec.yaml
 Supabase/
 ├── create_favorite_words_table.sql
 ├── enable_rls.sql
