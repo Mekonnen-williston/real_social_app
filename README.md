@@ -72,6 +72,12 @@ lib/
 │   |   |   ├── loading_widget.dart
 │   |   |   └── retry_widget.dart
 └── main.dart
+Supabase/
+├── create_favorite_words_table.sql
+├── enable_rls.sql
+├── select_policy.sql
+├── insert_policy.sql
+└── delete_policy.sql
 ```
 
 ## Supabase SQL Functions and Policies:
