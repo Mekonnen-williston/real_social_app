@@ -1,6 +1,6 @@
 # RealSocial Flutter App
 
-A production-ready Flutter application that demonstrates clean architecture, real-time updates with Supabase, state management with Riverpod, and navigation with AutoRoute. The app allows users to log in using Google Sign-In and manage their list of favorite words in real time. It also uses an AnimatedList to provide smooth UI animations when words are added.
+A Flutter application that demonstrates clean architecture, real-time updates with Supabase, state management with Riverpod, and navigation with AutoRoute. The app allows users to log in using Google Sign-In and manage their list of favorite words in real time. It also uses an AnimatedList to provide smooth UI animations when words are added.
 
 ## Features
 
