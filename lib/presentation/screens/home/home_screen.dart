@@ -40,7 +40,7 @@ class HomeScreen extends ConsumerWidget {
       onRefresh: () => _onRefresh(ref),
       child: Scaffold(
         appBar: AppBarWidget(
-          title: context.lango.favoriteWordsTitle,
+          title: context.lango.words,
           actions: [
             LanguageSwitchIconButton(),
             ThemeSwitcherWidget(),

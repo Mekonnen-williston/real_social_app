@@ -3,7 +3,7 @@
     "language": "שפה",
     "signInWithGoogle": "התחבר עם גוגל",
     "loginErrorMessage": "ההתחברות נכשלה. אנא נסה שוב.",
-    "favoriteWordsTitle": "מילים מועדפות",
+    "words": "מילים",
     "typeNewWordLabel": "הקלד מילה חדשה...",
     "logoutTooltip": "התנתק",
     "noWordsMessage": "לא נמצאו מילים. אנא הוסף מילים.",

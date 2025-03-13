@@ -18,7 +18,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginErrorMessage => 'Failed to sign in. Please try again.';
 
   @override
-  String get favoriteWordsTitle => 'Favorite Words';
+  String get words => 'Words';
 
   @override
   String get typeNewWordLabel => 'Type new word...';

@@ -3,7 +3,7 @@
     "language": "Language",
     "signInWithGoogle": "Sign in with Google",
     "loginErrorMessage": "Failed to sign in. Please try again.",
-    "favoriteWordsTitle": "Favorite Words",
+    "words": "Words",
     "typeNewWordLabel": "Type new word...",
     "logoutTooltip": "Logout",
     "noWordsMessage": "No words found. Please add some words.",

@@ -18,7 +18,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get loginErrorMessage => 'ההתחברות נכשלה. אנא נסה שוב.';
 
   @override
-  String get favoriteWordsTitle => 'מילים מועדפות';
+  String get words => 'מילים';
 
   @override
   String get typeNewWordLabel => 'הקלד מילה חדשה...';

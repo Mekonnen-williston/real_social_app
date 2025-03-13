@@ -113,11 +113,11 @@ abstract class AppLocalizations {
   /// **'Failed to sign in. Please try again.'**
   String get loginErrorMessage;
 
-  /// No description provided for @favoriteWordsTitle.
+  /// No description provided for @words.
   ///
   /// In en, this message translates to:
-  /// **'Favorite Words'**
-  String get favoriteWordsTitle;
+  /// **'Words'**
+  String get words;
 
   /// No description provided for @typeNewWordLabel.
   ///
