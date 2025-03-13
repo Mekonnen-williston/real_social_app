@@ -34,6 +34,10 @@ lib/
 │   │   ├── app_route.dart
 │   │   ├── app_route.gr.dart
 │   │   ├── auth_guard.dart
+│   ├── theme/
+│   │   ├── app_colors.dart
+│   │   ├── app_theme_controller.dart
+│   ├── app_preferences.dart
 │   ├── api_keys.dart
 │   ├── app_strings.dart
 │   ├── assets/
@@ -71,6 +75,7 @@ lib/
 │   |   |   ├── toast_widget.dart
 │   |   |   ├── loading_widget.dart
 │   |   |   └── retry_widget.dart
+│   |   |   └── theme_switcher_widget.dart
 └── main.dart
 Supabase/
 ├── create_favorite_words_table.sql
