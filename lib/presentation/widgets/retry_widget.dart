@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:real_social_app/core/app_colors.dart';
+import 'package:real_social_app/core/theme/app_colors.dart';
 import 'package:real_social_app/core/app_strings.dart';
 
 /// A widget that displays an error message and a retry button.

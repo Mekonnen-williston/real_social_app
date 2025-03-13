@@ -1,27 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:real_social_app/core/app_strings.dart';
+import 'package:real_social_app/core/router/app_router.dart';
 
-import 'core/app_strings.dart';
-import 'core/router/app_router.dart';
+import 'core/theme/app_theme_controller.dart';
 import 'data/supabase_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// Initialize the Supabase service to set up the connection to the Supabase backend.
+  ///
   await SupabaseService.initialize();
+
+  /// Initialize the ThemeControllerProvider to set up the theme mode based on user preferences.
+  /// This will load the saved theme mode from shared preferences and apply it to the app.
+  /// The theme mode can be light, dark, or system default.
+  ///
+  await ThemeControllerProvider().initialize();
+
+  /// The [ProviderScope] widget is the root of the application and provides the necessary
+  /// context for Riverpod providers.
+  ///
   runApp(ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   MyApp({super.key});
-  final appRouter = AppRouter();
+
+  /// The [AppRouter] instance is created here to handle the routing of the application.
+  /// This instance is used to delegate the routing and parse the route information.
+  ///
+  final AppRouter _appRouter = AppRouter();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeController = ref.watch(themeControllerProvider);
     return MaterialApp.router(
       title: AppStrings.appTitle,
-      routerDelegate: appRouter.delegate(),
-      routeInformationParser: appRouter.defaultRouteParser(),
-      debugShowCheckedModeBanner: false,
+      theme: themeController.lightThemeData,
+      darkTheme: themeController.darkThemeData,
+      themeMode: themeController.themeMode,
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

@@ -7,8 +7,10 @@ import 'package:real_social_app/models/extensions/word_extension.dart';
 import 'package:real_social_app/models/word.dart';
 import 'package:real_social_app/presentation/providers/auth_provider.dart';
 import 'package:real_social_app/presentation/providers/word_provider.dart';
+import 'package:real_social_app/presentation/widgets/app_bar_widget.dart';
 import 'package:real_social_app/presentation/widgets/loading_widget.dart';
 import 'package:real_social_app/presentation/widgets/retry_widget.dart';
+import 'package:real_social_app/presentation/widgets/theme_switcher_widget.dart';
 import 'package:real_social_app/presentation/widgets/toast_widget.dart';
 
 part 'widgets/add_new_word_widget.dart';
@@ -36,9 +38,9 @@ class HomeScreen extends ConsumerWidget {
     return RefreshIndicator.adaptive(
       onRefresh: () => _onRefresh(ref),
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text(AppStrings.favoriteWordsTitle),
-          actions: const [_LogOutWidget()],
+        appBar: AppBarWidget(
+          title: AppStrings.favoriteWordsTitle,
+          actions: [ThemeSwitcherWidget(), _LogOutWidget()],
         ),
         body: SafeArea(
           child: favoriteWordsAsync.when(

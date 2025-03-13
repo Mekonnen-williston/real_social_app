@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:real_social_app/core/app_colors.dart';
+import 'package:real_social_app/core/theme/app_colors.dart';
 
 /// an Enum to represent different types of Toast messages
 /// and their respective colors.

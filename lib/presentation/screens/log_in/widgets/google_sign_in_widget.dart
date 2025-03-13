@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:real_social_app/core/app_colors.dart';
+import 'package:real_social_app/core/theme/app_colors.dart';
 import 'package:real_social_app/core/app_strings.dart';
 import 'package:real_social_app/core/assets.dart';
 import 'package:real_social_app/core/router/app_router.dart';
