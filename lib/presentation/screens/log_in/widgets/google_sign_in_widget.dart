@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:real_social_app/core/app_colors.dart';
 import 'package:real_social_app/core/app_strings.dart';
 import 'package:real_social_app/core/assets.dart';
 import 'package:real_social_app/core/router/app_router.dart';
@@ -39,12 +40,12 @@ class GoogleSignInWidget extends ConsumerWidget {
   /// Returns the style for the button.
   ///
   ButtonStyle _style() => FilledButton.styleFrom(
-    backgroundColor: Colors.white,
-    foregroundColor: Colors.black,
+    backgroundColor: AppColors.white,
+    foregroundColor: AppColors.black,
     minimumSize: const Size(265, 44),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8),
-      side: const BorderSide(color: Colors.grey, width: 1),
+      side: const BorderSide(color: AppColors.grey, width: 1),
     ),
   );
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:real_social_app/core/app_colors.dart';
 import 'package:real_social_app/core/app_strings.dart';
 
 /// A widget that displays an error message and a retry button.
@@ -23,7 +24,7 @@ class RetryWidget extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.error, size: 50, color: Colors.red),
+            const Icon(Icons.error, size: 50, color: AppColors.red),
             const SizedBox(height: 16),
             Text(
               message ?? AppStrings.errorMessage,

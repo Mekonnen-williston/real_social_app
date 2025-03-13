@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_social_app/core/app_colors.dart';
 
 /// an Enum to represent different types of Toast messages
 /// and their respective colors.
@@ -110,7 +111,7 @@ class ToastWidget extends StatelessWidget {
       entry.remove();
       onDismiss?.call();
     });
-  } 
+  }
 
   static Alignment _getAlignment(ToastPosition position) {
     switch (position) {
@@ -127,32 +128,33 @@ class ToastWidget extends StatelessWidget {
     if (backgroundColor != null) return backgroundColor!;
     switch (type) {
       case ToastType.success:
-        return Colors.green.shade700;
+        return AppColors.toastSuccess;
       case ToastType.error:
-        return Colors.red.shade700;
+        return AppColors.toastError;
       case ToastType.warning:
-        return Colors.orange.shade700;
+        return AppColors.toastWarning;
       case ToastType.info:
-        return Colors.blue.shade700;
+        return AppColors.toastInfo;
     }
   }
 
   Color _getTextColor() {
     if (textColor != null) return textColor!;
-    return Colors.white;
+    return AppColors.white;
   }
 
   Widget _getIcon() {
     if (icon != null) return icon!;
+    const color = AppColors.white;
     switch (type) {
       case ToastType.success:
-        return const Icon(Icons.check_circle, color: Colors.white);
+        return const Icon(Icons.check_circle, color: color);
       case ToastType.error:
-        return const Icon(Icons.error, color: Colors.white);
+        return const Icon(Icons.error, color: color);
       case ToastType.warning:
-        return const Icon(Icons.warning, color: Colors.white);
+        return const Icon(Icons.warning, color: color);
       case ToastType.info:
-        return const Icon(Icons.info, color: Colors.white);
+        return const Icon(Icons.info, color: color);
     }
   }
 
